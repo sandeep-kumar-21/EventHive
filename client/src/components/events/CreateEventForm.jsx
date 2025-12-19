@@ -57,7 +57,9 @@ export default function CreateEventForm() {
         const { data: filePath } = await api.post('/upload', uploadData, {
             headers: { 'Content-Type': 'multipart/form-data' },
         });
-        const fullPath = `http://localhost:5000${filePath}`;
+        // const fullPath = `http://localhost:5000${filePath}`;
+        const API_BASE_URL = import.meta.env.VITE_API_URL.replace('/api', '');
+        const fullPath = `${API_BASE_URL}${filePath}`;
         setFormData(prev => ({ ...prev, imageUrl: fullPath }));
         toast({ title: "Success", description: "Image uploaded successfully" });
     } catch (error) {
