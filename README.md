@@ -107,10 +107,12 @@ npm install
 Configure Environment Variables: Create a .env file in the server directory:
 
 Code snippet
+```
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/eventhive
 JWT_SECRET=your_super_secret_key_123
 GEMINI_API_KEY=your_google_ai_studio_key
+```
 
 Start the Server: npm run dev
 
@@ -134,7 +136,7 @@ npm run dev
 # App runs on http://localhost:5173
 Project Structure
 Plaintext
-
+```
 EventHive/
 ├── server/
 │   ├── config/
@@ -191,6 +193,7 @@ EventHive/
     ├── package.json
     ├── tailwind.config.js
     └── vite.config.js
+```
 
 
 ## Project Gallery
